@@ -8,5 +8,4 @@ while ctemp != "c":
     ctemp = input("vui lòng nhập độ c cần chuyển đổi:")  
     if ctemp == "c":
         exit
-    
-    
+    print("hello world!")
