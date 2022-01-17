@@ -19,6 +19,8 @@ myfunc2()
 # 3 viết ct tính toán cộng trừ nhân chia in ra màn hình với yêu cầu ng dùng nhập biến thứ nhất cộng trừ nhân hoặc chia ( số )
 # Biến thứ 2 cộng trừ nhân chia ( chữ )
 # Biến 3 nhập biến ng ta mún cộng trừ nhân chia khi bấm enter sẽ ra kq 
+from importlib.resources import Package
+from json.tool import main
 import numbers
 from pydoc import text
 from unittest.util import strclass
@@ -52,13 +54,17 @@ def myfunc3():
 myfunc3()
 
 # 4 viết ct tính toán tuổi có đủ vị thành niên k 
-
+import datetime
 def myfunc4():
     year = input("Nhập năm sinh của bản thân: ")
+    x = datetime.datetime.now()
     if year.isdigit():
-        kq = 2022 - int(year)
-        kq >= 18
-        print(str(kq) + " tuổi rồi, đủ tuổi đi tù rồi")
+        kq = int(x.strftime("%Y")) - int(year)
+        if kq >= 18:
+            print(str(kq) + " tuổi rồi, đủ tuổi đi tù rồi")
+        else:
+            print("hên cho m đó, chưa đủ tuổi nha con")
     else:
         print("năm sinh mà nhập chữ bị ngu hả th mẹt lìn")
 myfunc4()
+
